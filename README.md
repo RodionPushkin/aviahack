@@ -1,19 +1,5 @@
 # aviahack
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Для установки
+Вам нужно зайти в главную директорию и установить пакеты npm командой npm i
+Далее вам нужно спуститься в папку server и установить пакеты npm командой npm i
+Далее запуск в директории server пишем команду npm run start и заходим на url <a href="localhost:3000">тык</a>
