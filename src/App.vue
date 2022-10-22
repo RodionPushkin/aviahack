@@ -113,9 +113,33 @@ html{
   min-height: 56px;
   font-size: 16px;
   padding: 0 16px;
+  display: block;
   border-radius: var(--border-radius);
   background: var(--bg-color);
   color: var(--font-color);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
+}
+button{
+  min-width: 272px;
+  min-height: 56px;
+  font-size: 16px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: var(--border-radius);
+  background: var(--main-color);
+  color: var(--bg-color);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
+  font-weight: 600;
+  transition: background 0.35s, color 0.2s;
+  @media screen and (min-width: 768px) {
+    &:hover{
+      background: var(--bg-color);
+      color: var(--font-color);
+    }
+  }
 }
 .container{
   width: 100%;
@@ -129,6 +153,9 @@ html{
 .main{
   overflow: hidden;
   position: relative;
+}
+.shadow{
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
 }
 .s{
   font-weight: 400;
