@@ -103,12 +103,12 @@ html{
 :root{
   --font-color: #3E3E3E;
   --bg-color: #FFFFFF;
-  --accent-color: #F2F3F7;
+  --accent-color: #e9ecf6;
   --main-color: #E30611;
   --black-color: #1D2023;
   --border-radius: 4px;
 }
-.input, input{
+input{
   min-width: 272px;
   min-height: 56px;
   font-size: 16px;
@@ -118,6 +118,68 @@ html{
   background: var(--bg-color);
   color: var(--font-color);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
+}
+.input{
+  position: relative;
+  display: inline-flex;
+  flex-direction: column-reverse;
+  margin-top: 24px;
+  label{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: top 0.2s;
+    pointer-events: none;
+    font-size: 18px;
+    user-select: none;
+  }
+  input:focus ~ label{
+    top: -12px;
+    font-size: 16px;
+  }
+  input:not(:placeholder-shown) ~ label{
+    top: -12px;
+    font-size: 16px;
+  }
+}
+.input-checkbox{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  label{
+    display: inline-flex;
+    padding: 2px;
+    height: 20px;
+    width: 40px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    &:before{
+      content: '';
+      height: 16px;
+      width: 16px;
+      background: var(--accent-color);
+      margin-left: 0px;
+      transition: margin-left 0.3s;
+      border-radius: 8px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
+      cursor: pointer;
+    }
+  }
+  input{
+    display: none;
+  }
+  input:checked ~ label{
+    &:before{
+      content: '';
+      height: 16px;
+      width: 16px;
+      background: var(--main-color);
+      margin-left: 20px;
+    }
+  }
 }
 button{
   min-width: 272px;
@@ -166,11 +228,19 @@ button{
   font-weight: 500;
   font-size: 50px;
   line-height: 60px;
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 .l{
   font-weight: 600;
   font-size: 72px;
   line-height: 86px;
   color: var(--black-color);
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+    line-height: 50px;
+  }
 }
 </style>

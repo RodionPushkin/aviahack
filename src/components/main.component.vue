@@ -3,8 +3,6 @@
   <div class="background">
     <div class="buble"></div>
     <div class="buble"></div>
-    <div class="buble"></div>
-    <div class="buble"></div>
   </div>
   <router-view></router-view>
 </main>
@@ -43,10 +41,9 @@ export default {
   }
   .buble:nth-child(1){
     animation: 120s linear infinite buble-1;
-    //width: 20vmin;
-    //background: var(--main-color);
-    //top: 0vmin;
-    //left: 0vmin;
+  }
+  .buble:nth-child(2){
+    animation: 180s linear infinite buble-2 reverse;
   }
 }
 @keyframes buble-1 {
@@ -79,6 +76,38 @@ export default {
     background: var(--main-color);
     top: 20vmin;
     left: 30vmin;
+  }
+}
+@keyframes buble-2 {
+  0%{
+    width: 40vmax;
+    background: var(--main-color);
+    top: 90vmax;
+    left: 60vmax;
+  }
+  25%{
+    width: 30vmax;
+    background: var(--main-color);
+    top: 70vmin;
+    left: 90vmax;
+  }
+  50%{
+    width: 50vmin;
+    background: var(--accent-color);
+    top: 60vmax;
+    left: 0vmax;
+  }
+  75%{
+    width: 20vmax;
+    background: var(--main-color);
+    top: 90vmax;
+    left: 10vmax;
+  }
+  100%{
+    width: 40vmax;
+    background: var(--main-color);
+    top: 90vmax;
+    left: 60vmax;
   }
 }
 </style>

@@ -14,7 +14,7 @@ app.use(cookieParser())
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'dist')))
-
+require('./router')(app)
 app.listen(port, () => {
     console.log(`Server started on port: ${port} at ${new Date().toLocaleString('ru')}`)
     // db.checkConnection()

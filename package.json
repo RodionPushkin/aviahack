@@ -7,8 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "chart.js": "^3.9.1",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
+    "vue-chartjs": "^4.1.2",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },

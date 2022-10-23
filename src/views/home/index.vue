@@ -1,10 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="l">Какой-то крутой заголовок</h1>
-    <h2 class="m">подзаголовок</h2>
-    <h3 class="s">подзаголовок</h3>
-    <input type="text" placeholder="текст" minlength="0" maxlength="32">
-    <button>текст</button>
+    <h1 class="l">Приветствуем!<br>Это сервис для просмотра и прогнозирования складских мощностей <router-link to="/panel">попробовать</router-link></h1>
   </div>
 </template>
 
@@ -14,11 +10,22 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container{
-  padding-top: 140px;
-}
-input{
-  margin-bottom: 24px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1{
+    a{
+      color: var(--bg-color);
+      background: var(--main-color);
+      padding: 12px;
+      border-radius: var(--border-radius);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 104px;
+  }
 }
 </style>
