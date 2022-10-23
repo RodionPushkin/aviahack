@@ -18,7 +18,7 @@ const authGuard = async (to, from, next) => {
     } else {
         if (to.path == "/auth") {
             next()
-        } else if(to.path == "/panel"){
+        } else if (to.path == "/panel") {
             next({path: "/auth"})
         }
     }

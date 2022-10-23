@@ -7,6 +7,6 @@ module.exports = router => {
         res.status(200).json(['ok'])
     }))
     router.put(`/api/user/auth`, (req, res) => {
-        res.status(200).cookie('token', 'ok', { expires: new Date(Date.now() + 900000), httpOnly: true }).json(['ok'])
+        res.status(200).cookie('token', 'ok', {expires: new Date(Date.now() + 900000), httpOnly: true}).json(['ok'])
     })
 }

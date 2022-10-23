@@ -1,9 +1,18 @@
 <template>
   <header class="header">
     <div class="container">
-      <router-link @click="isMenuOpened = false" to="/" class="logo"><span>aviahack</span> — <span>МТС</span></router-link>
+      <router-link @click="isMenuOpened = false" to="/" class="logo"><span>aviahack</span> — <span>МТС</span>
+      </router-link>
       <input type="checkbox" id="burger" v-model="isMenuOpened">
-      <label for="burger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></label>
+      <label for="burger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             class="feather feather-menu">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </label>
       <nav class="nav">
         <router-link @click="isMenuOpened = false" to="/">главная</router-link>
         <router-link @click="isMenuOpened = false" to="/panel">панель</router-link>
@@ -15,8 +24,8 @@
 <script>
 export default {
   name: "header.component",
-  data(){
-    return{
+  data() {
+    return {
       isMenuOpened: false
     }
   }
@@ -24,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header{
+.header {
   position: fixed;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(22px);
@@ -33,44 +42,53 @@ export default {
   width: 100vw;
   z-index: 997;
   padding: 24px 0;
-  .container{
+
+  .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .logo{
+
+  .logo {
     font-size: 24px;
     font-weight: 500;
     user-select: none;
-    span:first-child{
+
+    span:first-child {
       color: #0c5fff;
     }
-    span:last-child{
+
+    span:last-child {
       color: var(--main-color);
     }
   }
-  .nav{
+
+  .nav {
     display: flex;
     gap: 32px;
     align-items: center;
     font-size: 18px;
-    a{
+
+    a {
       user-select: none;
     }
   }
-  input{
+
+  input {
     display: none;
   }
-  label{
+
+  label {
     display: none;
   }
-  @media screen and (max-width: 768px){
+
+  @media screen and (max-width: 768px) {
     background: var(--bg-color);
     backdrop-filter: none;
-    .logo{
+    .logo {
       z-index: 999;
     }
-    .nav{
+    .nav {
       display: none;
       flex-direction: column;
       justify-content: center;
@@ -84,7 +102,7 @@ export default {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(22px);
     }
-    label{
+    label {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -95,10 +113,10 @@ export default {
       z-index: 999;
       cursor: pointer;
     }
-    input:checked ~ label{
+    input:checked ~ label {
       transform: rotate(-90deg);
     }
-    input:checked ~ .nav{
+    input:checked ~ .nav {
       display: flex;
       left: 0;
       opacity: 1;
@@ -109,16 +127,18 @@ export default {
 }
 </style>
 <style lang="scss">
-.header .nav a{
+.header .nav a {
   user-select: none;
   transition: opacity 0.2s linear;
   padding: 6px;
-  &.router-link-active{
+
+  &.router-link-active {
     //border-bottom: 1px solid var(--font-color);
     //color: var(--main-color);
   }
-  @media screen and (max-width: 768px){
-    &:hover{
+
+  @media screen and (max-width: 768px) {
+    &:hover {
       opacity: 0.8;
     }
   }

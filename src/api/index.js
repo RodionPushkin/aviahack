@@ -1,19 +1,24 @@
 const serverUrl = 'http://localhost:80/api/'
+
 class api {
-    async get(url,headers){
-        return await this.request('get',url,headers)
+    async get(url, headers) {
+        return await this.request('get', url, headers)
     }
-    async post(url,headers,body){
-        return await this.request('post',url,body,headers)
+
+    async post(url, headers, body) {
+        return await this.request('post', url, body, headers)
     }
-    async put(url,headers,body){
-        return await this.request('put',url,body,headers)
+
+    async put(url, headers, body) {
+        return await this.request('put', url, body, headers)
     }
-    async delete(url,headers,body){
-        return await this.request('delete',url,body,headers)
+
+    async delete(url, headers, body) {
+        return await this.request('delete', url, body, headers)
     }
-    async request(method,url,body,headers){
-        if(!headers){
+
+    async request(method, url, body, headers) {
+        if (!headers) {
             headers = {}
         }
         headers["Content-Type"] = 'application/json'
@@ -22,17 +27,18 @@ class api {
             method: method,
             headers: headers,
         }
-        if(body){
+        if (body) {
             data.body = JSON.stringify(body)
         }
-        return await fetch(serverUrl+url,data)
+        return await fetch(serverUrl + url, data)
             .then(response => response.json())
-            .then((res)=>{
+            .then((res) => {
                 return res
             })
-            .catch((err)=>{
+            .catch((err) => {
                 return []
             })
     }
 }
+
 export default new api()

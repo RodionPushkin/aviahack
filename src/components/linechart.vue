@@ -2,8 +2,8 @@
   <div class="shadow">
     <Line
       :chartData="config.data"
-      height="0"
-      width="0"
+      :height="0"
+      :width="0"
     />
   </div>
 </template>
@@ -34,19 +34,14 @@ ChartJS.register(
 export default {
   name: 'linechart',
   components: {Line},
+  props: ['labels', 'datasets'],
   data() {
     return {
       config: {
         type: 'line',
         data: {
-          labels: ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'],
-          datasets: [{
-            label: 'график',
-            data: [65, 59, 80, 81, 56, 55, 40, 12, 13, 14, 15, 16],
-            fill: false,
-            borderColor: 'rgb(75, 192, 192)',
-            tension: 0.1
-          }]
+          labels: this.labels,
+          datasets: this.datasets
         }
       }
     }

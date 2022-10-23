@@ -13,13 +13,14 @@
 
 <script>
 import api from "@/api/index.js";
+
 export default {
   name: "auth",
   methods: {
-    send(){
-      api.put('user/auth').then(res=>{
-        if(res.length > 0){
-          localStorage.setItem('token',res[0])
+    send() {
+      api.put('user/auth').then(res => {
+        if (res.length > 0) {
+          localStorage.setItem('token', res[0])
           this.$router.push('/panel')
         }
       })
@@ -29,12 +30,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container{
+.container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  form{
+
+  form {
     display: flex;
     flex-direction: column;
     gap: 24px;
