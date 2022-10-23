@@ -31,9 +31,9 @@ export default {
       isloading: true,
       countMonth: 6,
       months: [],
-      list: [65, 59, 80, 81, 56, 55, 40, 12, 13, 14, 15, 16, 10],
+      list: [650, 590, 800, 2810, 4560, 3550, 1400, 1200, 1300, 900, 1500, 1600, 1000],
       datasets: [{
-        label: 'график',
+        label: 'объем, м^3',
         data: [],
         fill: false,
         borderColor: '#E30611',
