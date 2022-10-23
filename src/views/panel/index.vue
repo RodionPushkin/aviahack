@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <linechart></linechart>
     <barchart></barchart>
+    <linechart></linechart>
   </div>
 </template>
 
