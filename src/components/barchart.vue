@@ -1,6 +1,6 @@
 <template>
   <div class="shadow">
-    <Line
+    <Bar
       :chartData="config.data"
       height="0"
       width="0"
@@ -9,35 +9,17 @@
 </template>
 
 <script>
-import {Line} from 'vue-chartjs'
-import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
-  LineElement,
-  LinearScale,
-  PointElement,
-  CategoryScale,
-  Plugin
-} from 'chart.js'
+import { Bar } from 'vue-chartjs'
+import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
-ChartJS.register(
-  Title,
-  Tooltip,
-  Legend,
-  LineElement,
-  LinearScale,
-  PointElement,
-  CategoryScale
-)
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 export default {
   name: 'linechart',
-  components: {Line},
+  components: {Bar},
   data() {
     return {
       config: {
-        type: 'line',
+        type: 'bar-chart',
         data: {
           labels: ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'],
           datasets: [{

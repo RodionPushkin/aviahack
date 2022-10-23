@@ -1,20 +1,27 @@
 <template>
   <div class="container">
     <linechart></linechart>
+    <barchart></barchart>
   </div>
 </template>
 
 <script>
 import linechart from "@/components/linechart";
+import barchart from "@/components/barchart";
 export default {
   name: "panel",
-  components: {linechart}
+  components: {linechart,barchart}
 }
 </script>
 
 <style lang="scss" scoped>
 .container{
   padding-top: 78px;
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column;
+  gap: 48px;
+  padding-bottom: 48px;
   @media screen and (max-width: 768px) {
     padding-top: 104px;
   }

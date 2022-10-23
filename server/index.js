@@ -4,7 +4,7 @@ const db = require("./database");
 const path = require("path");
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
-const port = 3000
+const port = 80
 app.use(require('cors')({
     credentials: true,
     methods: ['OPTION', 'GET', 'POST', 'PUT', 'DELETE'],

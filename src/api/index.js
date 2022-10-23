@@ -1,4 +1,4 @@
-const serverUrl = 'http://localhost:3000/api/'
+const serverUrl = 'http://localhost:80/api/'
 class api {
     async get(url,headers){
         return await this.request('get',url,headers)
