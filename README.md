@@ -1,4 +1,5 @@
 # aviahack
+Презентация <a href="https://docs.google.com/presentation/d/1WJqf8TWlYD2j5MyNGb8WFyuc1SaDnwOq/edit?usp=sharing&ouid=104868419984684149340&rtpof=true&sd=true">https://docs.google.com/presentation/d/1WJqf8TWlYD2j5MyNGb8WFyuc1SaDnwOq/edit?usp=sharing&ouid=104868419984684149340&rtpof=true&sd=true</a>
 <br>Для установки
 <br>Вам нужно зайти в главную директорию и установить пакеты npm командой npm i
 <br>Далее вам нужно спуститься в папку server и установить пакеты npm командой npm i
