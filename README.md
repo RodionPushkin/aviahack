@@ -1,8 +1,7 @@
 # aviahack
 
 <br>Для установки
-<br>Вам нужно зайти в главную директорию и установить пакеты npm командой npm i
-<br>Далее вам нужно спуститься в папку server и установить пакеты npm командой npm i
+<br>Вам нужно спуститься в папку server и установить пакеты npm, командой npm i
 <br>Далее запуск в директории server пишем команду npm run start и заходим на url <a href="localhost:80">localhost:
 80</a>
 ![image](https://user-images.githubusercontent.com/50911976/197386444-b58e5174-adc0-4606-b1ad-5667c87716a1.png)
