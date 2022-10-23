@@ -6,5 +6,6 @@
 <br>Далее запуск в директории server пишем команду npm run start и заходим на url <a href="localhost:80">localhost:
 80</a>
 ![image](https://user-images.githubusercontent.com/50911976/197386444-b58e5174-adc0-4606-b1ad-5667c87716a1.png)
-![image](https://user-images.githubusercontent.com/50911976/197386485-221e51e2-14d9-4322-a6da-ebb515bbe6b0.png)
-![image](https://user-images.githubusercontent.com/50911976/197386500-f7bf5464-ae1c-4daa-9ace-9789f4609d1e.png)
+![image](https://user-images.githubusercontent.com/50911976/197392840-388ee5db-e53d-4697-9cdf-9634dce74c33.png)
+![image](https://user-images.githubusercontent.com/50911976/197392921-b4fa7702-3aef-4886-9ca6-3b8327f56f6b.png)
+
